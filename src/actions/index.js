@@ -9,10 +9,22 @@ export const DECREMENT = 'DECREMENT';
 // logic of updating the central Redux store. That
 // is left to the reducer(s).
 
-export const increment = () => {
-  // Fill in this function
+//action creaters are functions that create actions
+//actions are payloads of info that send data from your app to the store
+//they are the ONLY source of information!! (sent by store.dispatch())
+
+export const increment = (count) => { //action creator
+  console.log(count);
+  return { //action
+    type: INCREMENT,
+    payload: count + 1
+  }
 };
 
-export const decrement = () => {
-  // Fill in this function
+export const decrement = (count) => {
+  console.log(count);
+  return {
+    type: DECREMENT,
+    payload: count - 1
+  }
 };
